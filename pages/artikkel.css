@@ -48,6 +48,10 @@ h3 { /* Underoverskrift i main */
 	margin: 40px 0 8px 0;
 }
 
+p, ul, li {
+	line-height: 1.25;
+}
+
 a { /* Farge på linker */
 	color: #e0414c;
 }
@@ -146,7 +150,7 @@ nav#main-navigation {
 	grid-area: navigation;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	background-color: #d1b786;
+	background-color: #d7bd8d;
 	text-align: center;
 }
 
@@ -157,20 +161,21 @@ nav#main-navigation a {
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 24px;
+	color: #d7414c;
 }
 
 nav#main-navigation a:hover {
-	background-color: #617166;
+	background-color: #e7cd9d;
 }
 
 #navlineL {
 	grid-area: navL;
-	background-color: #d1b786;
+	background-color: #d7bd8d;
 }
 
 #navlineR {
 	grid-area: navR;
-	background-color: #d1b786;
+	background-color: #d7bd8d;
 }
 
 
