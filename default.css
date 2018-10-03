@@ -1,0 +1,296 @@
+@import url("normalize.css");
+
+html {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	display: grid;
+	grid-template-columns: 0.9fr minmax(184px, 1fr) minmax(184px, 1fr) minmax(232px, 0.75fr) 0.9fr;
+    grid-template-areas: 
+        "header header header header header"
+        "navL navigation navigation navigation navR"
+        ". main main aside ."
+        "footer footer footer footer footer";
+	grid-template-rows: 408px 38px 1fr 160px;
+    max-width: 100%;
+    margin: 0 auto;
+	background-image: url("backgroundblur.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+h1 { /* Overskrift i header */
+	margin-left: 20px;
+	font-size: 60px;
+	font-weight: 700;
+}
+
+h2 { /* Overskrift i main */
+	font-size: 32px;
+	text-align: center;
+	font-weight: 700;
+	display: inline;
+	width: 100%;
+	margin: 12px 0 8px 0;
+}
+
+h3 { /* Underoverskrift i main */
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 0;
+}
+
+h4 { /* Overskrift i aside*/
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 10%;
+}
+
+a { /* Farge på linker */
+	color: #e0414c;
+}
+
+/* --- "Les mer"-knapper --- */
+a.les-mer, a.les-mer-left, a.les-mer-right, button#btnSoek {
+	background-color: #666;
+	color: #fff;
+	border: 2px solid #444;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 9px;
+}
+
+a.les-mer:hover, a.les-mer-left:hover, a.les-mer-right:hover, button#btnSoek:hover {
+	background-color: #aaa;
+}
+
+a.les-mer:active, a.left-mer-left:active, a.les-mer-right:active, button#btnSoek:active {
+	background-color: #fff;
+	color: #000;
+}
+
+a.les-mer-left {
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
+}
+
+a.les-mer-right {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+button#btnSoek {
+	margin-top: 6px;
+}
+
+/*gjør slik at man får en "mildere" blåfarge om man markerer teksten*/
+::selection {
+  background: #39f6;
+}
+::-moz-selection {
+  background: #39f6;
+}
+
+/*--------------------------*/
+/* ----- Hovedheader ------ */
+/*--------------------------*/
+
+header#main-header {
+	grid-area: header;
+	display: grid;
+	grid-template-areas: ". headerskrift headerskrift headerskrift .";
+	grid-template-columns: 0.6fr minmax(180px, 1fr) minmax(180px, 1fr) minmax(230px, 0.75fr) 0.4fr;
+	background-image: url("background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	color: #000;
+}
+
+header#main-header p {
+	font-size: 24px;
+	margin-left: 160px;
+}
+
+.headerskrift {
+	grid-area: headerskrift;
+	padding-top: 100px;
+	line-height: 40%;
+}
+
+.headerskrift div { /* Linje bak headerskrift */
+	background-image: linear-gradient(to right , #fff0, #ffff, #fff0);
+	width: 100%;
+	height: 32%;
+	margin-top: -110px;
+	margin-left: -50%;
+	padding-right: calc(12vw + 150px);
+}
+
+.headerlogo {
+	grid-area: headerlogo;
+}
+
+
+/*--------------------------*/
+/* --- Navigasjonslinje --- */
+/*--------------------------*/
+
+nav#main-navigation {
+	grid-area: navigation;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: #d1b786;
+	text-align: center;
+}
+
+nav#main-navigation a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+nav#main-navigation a:hover {
+	background-color: #617166;
+}
+
+#navlineL {
+	grid-area: navL;
+	background-color: #d1b786;
+}
+
+#navlineR {
+	grid-area: navR;
+	background-color: #d1b786;
+}
+
+
+/*--------------------------*/
+/* ----- Main-område ------ */
+/*--------------------------*/
+
+main#main-area {
+	grid-area: main;
+	background-color: #fffd;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding: 5px;
+}
+
+#main-area article.boks-artikler {
+
+	width: 230px;
+	margin: 5px;
+	background-color: #fffa;
+	padding: 0 10px;
+	position: relative;
+}
+
+.boks-artikler h3 {
+	text-align: center;
+}
+
+.boks-artikler img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	height: 154px;
+}
+
+.boks-artikler p {
+	margin-bottom: 56px;
+}
+
+.radartikler p {
+	margin-bottom: 40px;
+}
+
+#main-area article.radartikler {
+	width: calc(100% - 64px);
+	min-height: auto;
+	display: flex;
+	flew-flow: row nowrap;
+	justify-content: space-between;
+	background-color: #fffa;
+	padding: 20px 20px;
+	position: relative;
+}
+
+#main-area article.radartikler {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.radartikler div.tekstboks {
+	width: calc(200%/3);
+}
+
+.radartikler picture.bildeboks {
+	width: calc(100%/3);
+	vertical-align: center;
+}
+
+
+/*--------------------------*/
+/* -------- Aside --------- */
+/*--------------------------*/
+
+aside#main-aside {
+	grid-area: aside;
+	grid-template-rows: 1fr 1fr 1fr;
+	display: grid;
+	min-width: 100px;
+	background-color: #dddd;
+}
+
+aside#main-aside section {
+	border-top: 4px solid #666d;
+	padding: 0 5%;
+}
+
+aside#main-aside section:first-child {
+	border-top: 0;
+}
+
+.iframe {
+	width: 85%;
+	border: none;
+}
+
+/*--------------------------*/
+/* -------- Footer -------- */
+/*--------------------------*/
+
+footer#main-footer {
+	grid-area: footer;
+	display: flex;
+	background-color: #000;
+	color: #fff;
+}
+
+.footerL {
+	margin-right: auto;
+	padding-top: 48px;
+	padding-left: 10px;
+}
+
+.footerR {
+	margin-left: auto;
+	text-align: center;
+	padding-top: 30px;
+	padding-right: 10px;
+	line-height: 20%;
+}

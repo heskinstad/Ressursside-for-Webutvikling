@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Git/GitHub</title>
+		<link rel="stylesheet" href="../artikkel.css" />
+		<link rel="stylesheet" href="../print.css" media="print" />
+		<link rel="shortcut icon" href="../../favicon.png" />
+    </head>
+    <body>
+        <header id="main-header">
+			<div class="headerskrift"><h1>Webutvikling</h1><div></div></div>
+		</header>
+		<div id="navlineL"></div>
+		<nav id="main-navigation">
+			<a href="../../index.html">Hjem</a>
+			<a href="../git/git.html">Git/GitHub</a>
+			<a href="../mediatyper/mediatyper.html">Mediatyper</a>
+			<a href="../layouts/layouts.html">CSS Layouts</a>
+		</nav>
+		<div id="navlineR"></div>
+		
+		<main id="main-area">
+			<h2>Git/GitHub</h2>
+			<time class="overskriftsDato" datetime="2018-10-02">02/10/2018</time>
+			<article>
+				<h3>Git</h3>
+				
+				<p>Git er en programvare som brukes for å kunne gjøre versjonskontroll av datafiler, eksempelvis i et prosjekt, noe som kan være en absolutt nødvendighet (spesielt i prosjekter der flere utviklere samarbeider). 
+				Git ble opprinnelig påbegynt av mannen bak Linux, Linus Torvalds. 
+				Det at Git gjør versjonskontroll av filer, betyr at den som en del av backup-prosessen lagrer alle forandringer, slik at det på den måten skal mye mer til for å "miste" data eller ikke kunne revertere endringer. 
+				Forøvrig er Git også gratis og dens kildekode åpen. <a href="https://git-scm.com/">Gits offisielle nettsted</a> beskriver seg selv slik: 
+				"<em>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</em>"</p>
+				<picture class="bildeHoeyre">
+					<img src="Git-Logo-2Color.png" alt="Git logo" title="Gits offisielle logo" />
+				</picture>
+				<p>Noe jeg synes er en stor fordel med Git, er nettopp de store mulighetene har man for å samarbeide med andre, med tanke på versjonskontrollen og selve lagringsporsessen. 
+				Git er nemlig bygd opp slik at flere utviklere deler samme "repository", der de kan gjøre endringer samtidig. 
+				Når endringer blir gjort, får filene IDer som skiller dem fra hverandre, også om det bare blir gjort endringer i filene. På den måten har alle som samarbeider tilgang til filer "bakover i tid". 
+				Samtidig sørger Git for at man aldri overskriver hverandres kode ved et uhell. Har man en gammel versjon av filen/prosjektet gir Git beskjed om dette samt at det er mulig å merge de forskjellige versjonene sammen.</p>
+
+				<p>Endringer i Git-filer skjer ved hjelp av øyeblikssbilder (snapshots) av dataen som er blitt forandret. Ifølge Git-teamet selv er "Git-metoden" (en "strøm" av øyeblikksbilder) 
+				overlegen mer tradisjonell "deltabasert versjonskontroll" (at informasjonen blir lagret ved å spore alle endringer gjort på hver fil over tid). 
+				Arbeidsflyten ved bruk av Git fungerer mer eller mindre slik:</p>
+				<ul>
+					<li>Modifisering/endringer av filer gjøres (lokalt).</li>
+					<li>De områdene man vil oppdatere av filen(e) velges. Ikke noe annet blir oppdatert i neste fase.</li>
+					<li>Et øyeblikksbilde av det valgte området fra forrige fase blir tatt, for deretter å laste opp dette til ens Git-oppbevaringssted. Det er etter dette stadiet at andre kan se forandringene (din siste "commit".</li>
+				</ul>
+				
+				<h3>GitHub</h3>
+				<picture class="bildeHoeyre">
+					<img src="GitHub_Logo.png" alt="GitHub logo" title="GitHubs offisielle logo" />
+				</picture>
+				<p>Som navnet tilsier, så er GitHub en nettbasert vertstjeneste for Git, og er på dette tidspunktet (2018) den største verten for kildekode i verden. 
+				GitHub tilbyr alt av Gits standardfunksjonalitet og i tillegg noen ekstra funksjoner som forenkler samarbeidprosessen og delingsmulighetene.</p>
+
+				<p>GitHub fungerer ved at man først lager en "repository". Dette er selve prosjektet man skal arbeide med. 
+				Ved å ha prosjektet åpent er det mulig for andre å ikke bare ha tilgang til koden, men også å kunne komme med forslag til endringer 
+				(men den som har laget prosjektet må fortsatt "godkjenne" dette for at selve repository-koden skal bli endret).</p>
+				
+				<h3>Repository på GitHub</h3>
+				<p>Under er et skjermbilde av min siste commit på GitHub. Trykk på bildet for å komme til den aktuelle repositorien.</p>
+				<picture class="bildeHoeyre">
+					<img src="GitHub_Logo.png" alt="GitHub logo" title="GitHubs offisielle logo" />
+				</picture>
+			</article>
+		</main>
+		
+		<footer id="main-footer">
+			<div class="footerL">
+				<p>Hans Eivind Skinstad</p>
+				<p>E-post: <a href="mailto:hans.e.skinstad@hiof.no">hans.e.skinstad@hiof.no</a></p>
+			</div>
+			<div class="footerR">
+				<img src="../../logotestsmall2.png" alt="Logo" />
+				<p>&copy; 2018 Hans Eivind Skinstad</p>
+			</div>
+		</footer>
+    </body>
+</html>

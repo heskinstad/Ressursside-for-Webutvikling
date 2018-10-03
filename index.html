@@ -1,0 +1,132 @@
+<!DOCTYPE html>  <!--Nettsted laget av Hans Eivind Skinstad i tidsrommet 23/09/2018 - 03/10/2018-->
+<html lang="no">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Webutvikling</title>
+		<link rel="stylesheet" href="default.css" />
+		<link rel="shortcut icon" href="favicon.png" />	<!--ikon til nettside (i tab-området)-->
+		<script>
+		
+			//funksjonen gjør det mulig å søke på google med inputten i aside. Inputten får value="GitHub" når siden lastes inn
+			//P.S. scripten er "hjemmelaget", altså ikke kopiert rett fra nettet. Den baserer seg på å rett og slett merge en URL med søkeordet. Bugs kan trolig forekomme
+			//P.P.S Jeg vet f. eks. ikke hvordan den takler alle spesialtegn, men da jeg testet gikk det stort sett bra (med unntak av "#", som den ikke inkluderte i søket)
+			
+			window.onload = soek;
+			
+			function soek() {
+				document.getElementById("btnSoek").innerHTML = "Søk med Google";
+				document.getElementById("inputSoek").value = "GitHub";
+				document.getElementById("btnSoek").onclick = aapneURL;
+			}
+			
+			function aapneURL() {
+				var skriveInput = document.getElementById("inputSoek").value;
+				window.open("https://www.google.com/search?q=" + String(skriveInput));
+			}
+		</script>
+    </head>
+    <body>
+        <header id="main-header">
+			<div class="headerskrift"><h1>Webutvikling</h1><p>av Hans Eivind Skinstad</p><div></div></div>
+		</header>
+		<div id="navlineL"></div>
+		<nav id="main-navigation">
+			<a href="index.html">Hjem</a>
+			<a href="pages/git/git.html">Git/GitHub</a>
+			<a href="pages/mediatyper/mediatyper.html">Mediatyper</a>
+			<a href="pages/layouts/layouts.html">CSS Layouts</a>
+		</nav>
+		<div id="navlineR"></div>
+		
+		<main id="main-area">
+			<h2>Ressursside for Webutvikling</h2>
+			<article class="boks-artikler">
+				<h3>Git/GitHub</h3>
+				<img src="pages/git/GitGitHub.png" alt="Git/GitHub logo" title="Logoene til Git og GitHub" />
+				<p>Git er en programvare for bla. versjonskontroll av filer, mens GitHub bruker dette i en nettbasert løsning der samarbeid blant utviklere forenkles betraktelig.</p>
+				<a href="pages/git/git.html" class="les-mer-right">Les mer</a>
+			</article>	
+			<article class="boks-artikler">
+				<h3>Mediatyper</h3>
+				<img src="pages/mediatyper/media-query-css-Small.png" alt="Mediatyper og responsivt design" title="Responsivt design med mediatyper. Bilde fra silocreativo.com" />
+				<p>Ulike mediatyper (CSS media types) gjør at nettsteder blir lettere tilgjengelig på enda flere enheter. Dette sikrer god responsibilitet og kan bla. gjøre det lettvint for brukeren å gjøre en utskrift.</p>
+				<a href="pages/mediatyper/mediatyper.html" class="les-mer-right">Les mer</a>
+			</article>
+			<article class="boks-artikler">
+				<h3>CSS Layouts</h3>
+				<img src="pages/layouts/jose-alejandro-cuffia-799485-unsplash-Small.jpg" alt="Skissering og layout" title="Skissering og layout i en bok (illustrasjonsfoto)" />
+				<p>Det finnes svært mange forskjellige måter å bygge opp en nettside på. Inntil nylig brukte man som regel float, men etter at FlexBox og CSS Grid ble introdusert brukes dette nå i større grad.</p>
+				<a href="pages/layouts/layouts.html" class="les-mer-right">Les mer</a>
+			</article>
+			<article class="radartikler">
+				<div class="tekstboks">
+					<h3>Skisse</h3>
+					<p>Her finner du skissene til nettstedet, altså for forsiden og artikkelsidene.<br />
+					Dette utgjør oppgave 1 fra Oblig 2.</p>
+					<a href="pages/skisse/skisse.html" class="les-mer-left">Les mer</a>
+				</div>
+				<picture class="bildeboks">
+					<img src="pages/skisse/combinedSmall.jpg" alt="Skisse av nettstedet" title="Skisse av nettstedet" />
+				</picture>
+			</article>
+			<article class="radartikler">
+				<div class="tekstboks">
+					<h3>Artikkelmal</h3>
+					<p>Alle artikkelsidene er basert på samme artikkelmal.<br />
+					Denne finner du her</p>
+					<a href="pages/artikkelmal/artikkelmal.html" class="les-mer-left">Les mer</a>
+				</div>
+				<picture class="bildeboks">
+					<img src="pages/artikkelmal/pankaj-patel-721645-unsplashSmall.jpg" alt="Bilde av nettside" title="Forsiden på et nettsted (illustrasjonsfoto)" />
+				</picture>
+			</article>
+			<article class="radartikler">
+				<div class="tekstboks">
+					<h3>Print-layout</h3>
+					<p>I oppgave 7 fra Oblig 2 skulle man lage en CSS-layout for utskrift av artiklene.</p>
+					<a href="pages/print.css" class="les-mer-left">Gå til stilark</a>
+				</div>
+				<picture class="bildeboks">
+					<img src="pages/ron-dyar-521350-unsplash.jpg" alt="Bunke med papirark" title="Bunke med papirark (illustrasjonsfoto)" />
+				</picture>
+			</article>
+		</main>
+		
+		<aside id="main-aside">
+			<section class="webutvikling">
+				<h4>Webutvikling</h4>
+				<iframe src="https://www.youtube.com/embed/Zftx68K-1D4" class="iframe" allowfullscreen></iframe>
+				<p>En guide i de ulike teknologiene innenfor webutvikling.
+				<br />Video fra desember 2017.</p>
+			</section>
+			<section class="responsivt-design">
+				<h4>Responsivt design</h4>
+				<p>Under finner du 5 artikler/infosider om responsivt design:</p>
+				<ul>
+					<li><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive">Responsive Web Design Basics</a><br /></li>
+					<li><a href="https://responsivedesign.is">Responsivedesign.io</a></li>
+					<li><a href="https://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design">Beginner’s Guide to Responsive Web Design</a></li>
+					<li><a href="https://cssgrid.io">CSS Grid with Wes Bos</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive web design</a></li>
+				</ul>
+			</section>
+			<section class="github-soek">
+				<h4>GitHub på Google</h4>
+				<p>Google er din venn! Under kan du søke etter "GitHub" via Google (eller noe annet, om du ønsker det).</p>
+				<p><input placeholder="Søk med Google" id="inputSoek" size="14" /><br />
+				<button type="button" id="btnSoek">Vennligst tillat JavaScript</button></p>
+			</section>
+		</aside>
+		
+		<footer id="main-footer">
+			<div class="footerL">
+				<p>Hans Eivind Skinstad</p>
+				<p>E-post: <a href="mailto:hans.e.skinstad@hiof.no">hans.e.skinstad@hiof.no</a></p>
+			</div>
+			<div class="footerR">
+				<img src="logotestsmall2.png" alt="Logo" />
+				<p>&copy; 2018 Hans Eivind Skinstad</p>
+			</div>
+		</footer>
+    </body>
+</html>

@@ -1,0 +1,231 @@
+@import url("../normalize.css");
+
+html {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	display: grid;
+	grid-template-columns: 1fr minmax(184px, 1fr) minmax(184px, 1fr) minmax(232px, 0.75fr) 1fr;
+    grid-template-areas: 
+        "header header header header header"
+        "navL navigation navigation navigation navR"
+        ". main main main ."
+        "footer footer footer footer footer";
+	grid-template-rows: 100px 38px 1fr 160px;
+    max-width: 100%;
+    margin: 0 auto;
+	background-image: url("../backgroundblur.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+h1 { /* Overskrift i header */
+	margin-top: 12px;
+	margin-left: 20px;
+	font-size: 60px;
+	font-weight: 700;
+}
+
+h2 { /* Overskrift i main */
+	font-size: 42px;
+	text-align: center;
+	font-weight: 700;
+	margin: 12px 0 8px 0;
+}
+
+h3 { /* Underoverskrift i main */
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 0;
+	margin: 40px 0 8px 0;
+}
+
+a { /* Farge på linker */
+	color: #e0414c;
+}
+
+time.overskriftsDato {
+	font-size: 16px;
+	font-style: italic;
+	display: block;
+	text-align: right;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* --- "Les mer"-knapper --- */
+a.les-mer, a.les-mer-left, a.les-mer-right, button#btnSoek {
+	background-color: #666;
+	color: #fff;
+	border: 2px solid #444;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 9px;
+}
+
+a.les-mer:hover, a.les-mer-left:hover, a.les-mer-right:hover, button#btnSoek:hover {
+	background-color: #aaa;
+}
+
+a.les-mer:active, a.left-mer-left:active, a.les-mer-right:active, button#btnSoek:active {
+	background-color: #fff;
+	color: #000;
+}
+
+a.les-mer-left {
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
+}
+
+a.les-mer-right {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+button#btnSoek {
+	margin-top: 6px;
+}
+
+/*gjør slik at man får en "mildere" blåfarge om man markerer teksten*/
+::selection {
+  background: #39f6;
+}
+::-moz-selection {
+  background: #39f6;
+}
+
+/*--------------------------*/
+/* ----- Hovedheader ------ */
+/*--------------------------*/
+
+header#main-header {
+	grid-area: header;
+	display: grid;
+	grid-template-areas: ". headerskrift headerskrift headerskrift .";
+	grid-template-columns: 0.6fr minmax(180px, 1fr) minmax(180px, 1fr) minmax(230px, 0.75fr) 0.4fr;
+	background-image: url("../background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	color: #000;
+}
+
+.headerskrift {
+	grid-area: headerskrift;
+}
+
+.headerskrift div { /* Linje bak headerskrift */
+	background-image: linear-gradient(to right , #fff0, #ffff, #fff0);
+	width: 100%;
+	height: 62%;
+	margin-top: -100px;
+	margin-left: -50%;
+	padding-right: 240px;
+}
+
+.headerlogo {
+	grid-area: headerlogo;
+}
+
+
+/*--------------------------*/
+/* --- Navigasjonslinje --- */
+/*--------------------------*/
+
+nav#main-navigation {
+	grid-area: navigation;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: #d1b786;
+	text-align: center;
+}
+
+nav#main-navigation a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+nav#main-navigation a:hover {
+	background-color: #617166;
+}
+
+#navlineL {
+	grid-area: navL;
+	background-color: #d1b786;
+}
+
+#navlineR {
+	grid-area: navR;
+	background-color: #d1b786;
+}
+
+
+/*--------------------------*/
+/* ----- Main-område ------ */
+/*--------------------------*/
+
+main#main-area {
+	grid-area: main;
+	background-color: #fffd;
+	padding: 12px 40px 20px 40px;
+}
+
+figure {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.bildeHoeyre {
+	float: right;
+	width: calc(40% + 100px);
+	margin: 0 0 10px 10px;
+	padding: 0;
+}
+
+.skjermbilde {
+	float: left;
+	width: calc(40% + 100px);
+	margin: 0 10px 10px 0;
+	padding: 0;
+}
+
+/*--------------------------*/
+/* -------- Footer -------- */
+/*--------------------------*/
+
+footer#main-footer {
+	grid-area: footer;
+	display: flex;
+	background-color: #000;
+	color: #fff;
+}
+
+.footerL {
+	margin-right: auto;
+	padding-top: 48px;
+	padding-left: 10px;
+}
+
+.footerR {
+	margin-left: auto;
+	text-align: center;
+	padding-top: 30px;
+	padding-right: 10px;
+	line-height: 20%;
+}

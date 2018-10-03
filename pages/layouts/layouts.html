@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Artikkelside</title>
+		<link rel="stylesheet" href="../artikkel.css" />
+		<link rel="stylesheet" href="../print.css" media="print" />
+		<link rel="shortcut icon" href="../../favicon.png" />
+    </head>
+    <body>
+        <header id="main-header">
+			<div class="headerskrift"><h1>Webutvikling</h1><div></div></div>
+		</header>
+		<div id="navlineL"></div>
+		<nav id="main-navigation">
+			<a href="../../index.html">Hjem</a>
+			<a href="../git/git.html">Git/GitHub</a>
+			<a href="../mediatyper/mediatyper.html">Mediatyper</a>
+			<a href="../layouts/layouts.html">CSS Layouts</a>
+		</nav>
+		<div id="navlineR"></div>
+		
+		<main id="main-area">
+			<h2>CSS-Layouts</h2>
+			<time class="overskriftsDato" datetime="2018-10-02">02/10/2018</time>
+			<article>		
+				<h3>Float</h3>
+				<p>Det er vanlig å bruke den såkalte boksmodellen (box-model) i utformingen av nettsider, og inntil relativt nylig gjerne i kombinasjon med float-elementer. 
+				Kort fortalt handler boksmodellen om hvordan elementer posisjoneres og struktureres, samt elementene de inneholder.</p>
+				
+				<p>De fleste bildene på artikkelsidene bruker float for å posisjonere seg i forhold til teksten (på både høyre og venstre side). 
+				Grunnen til at jeg ikke brukte CSS Grid eller FlexBox til dette var fordi sidene inneholder såpass med tekst at posisjoneringen med bildene rett og slett var enklest slik, 
+				og fordi layouten for innholdet i main ikke er noe særlig avansert.</p>
+
+				<h3>Flexbox</h3>
+				<picture class="bildeHoeyre">
+						<img src="flexBoxRowJustify.png" alt="FlexBox-eksempel" title='Hvordan flex-wrap: wrap og justify-content: space-around "fungerer"' />
+				</picture>
+				<p>Flexbox ("Flexible Box Module") er en ble implementert inn i CSS da CSS3 kom, og fjerner i mange tilfeller behovet for float. 
+				Hele FlexBox er bygget på ideen om at man skal ha mulighet til å relativt enkelt kunne fylle opp en konteiner/boks så mye som mulig med elementene den inneholder. 
+				For å kunne gjøre dette effektivt, og ikke minst til en viss grad automatisk må elementene kunne justeres både i høyden og bredden for å fylle mest mulig av tomrommet. 
+				Flexbox' fleksibilitet er derfor avgjørende for hvor avansert layout man kan lage på nettsiden.
+				Med f. eks. flex-wrap kan det bestemmes at elementene innenfor konteineren skal legge over flere linjer, og med justify-content hvordan elementene skal legge seg på hver rad (se illustrasjon).  
+				Dette kan bla. brukes til å lage mer responsive nettsider som reguleres etter størrelsen på nettleservinduet og som har forskjellig layout på mobil/nettbrett og PC/Mac.</p>
+				
+				<p>Bla. boksenes plassering på forsiden er bygget opp med FlexBox, der jeg har satt at de skal "wrappe" når det ikke lenger er nok plass til alle. 
+				Dette betyr at de "hopper" ned en linje når det ikke er plass til alle. 
+				Noe annet jeg også gjorde med de samme boksene, var at avstanden mellom dem alltid skulle være like stor, og at det skulle være en viss avstand mellom sidene i main og artikkelboksene. 
+				Til dette brukte jeg "justify-content: space-around".
+				Selv må jeg innrømme at det ikke ser spesielt bra ut når vinduet krympes slik at to bokser ligger øverst og en tynn boks tar opp hele raden under, 
+				men ettersom jeg skal legge til flere artikler senere i semesteret, så tror jeg at det kommer til å se litt bedre ut, og mener derfor at dette er en grei løsning.</p>
+
+				<h3>Grid</h3>
+				
+				<p>Det bør nevnes at Flexbox er laget for å brukes i én dimensjon, altså enten i rader eller kolonner. 
+				CSS Grid brukes derimot til å posisjonere både rader og kolonner samtidig. 
+				På en måte kan man si at CSS Grid fungerer litt som tables i html, men bare med større funksjonalitet og lettvinthet rundt utformingen, 
+				og at CSS Grid faktisk er laget for å brukes i hovedutformingen og designet av nettsiden, noe tables overhodet ikke bør brukes til i 2018! 
+				For før Grid brukte man bla. tables, float og block-elementer for å posisjonere og utforme nettsider. For å få dette til måtte man ofte ta i bruk "hacks". 
+				CSS Grid-modulen gjør at man ikke trenger å bruke "hacks" og har i mer eller mindre grad erstattet bruken av både tables og float i nettsideutformingen.
+				</p>
+				<figure class="skjermbilde">
+					<a href="forsideGrid.jpg">
+						<img src="forsideGrid.jpg" alt="Grid på dette nettstedet" title="Forsiden til nettstedet i Grid" />
+					</a>
+					<figcaption>Trykk på bildet for større versjon</figcaption>
+				</figure>
+				<p>På dette nettstedet har jeg brukt CSS Grid for å bygge opp og utforme hovedelementene, dvs. headeren, navigasjonsmenyen, main- og aside-elementet og footeren. 
+				Bildet til venstre viser hvordan den øvre delen av forsiden til dette nettstedet er bygget opp, og høyden på både headeren og navigasjonsmenyen er angitt i piksler, 
+				mens main (og aside som ligger på samme rad) sin høyde reguleres av mengden innhold. Jo større plass innholdet tar, jo høyere blir main og aside. 
+				Siden jeg da har brukt FlexBox for innholdet i main, er det svært enkelt å legge til flere bokser/artikler med innhold, 
+				enten i form av bokser det er plass til flere av i bredden, eller bokser som tar opp hele bredden i main. 
+				Disse finnes i stilarket til forsiden og har classene "boksartikler" og "radartikler".</p>
+				
+				<p>Det er altså mulig å kombinere CSS Grid og Flexbox i oppbyggingen og utformingen av en nettside.  
+				<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox">CSS-tricks</a> forklarer det kort slik: 
+				"<em>Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.</em>" 
+				Grid blitt brukt til utformingen av selve hovedstrukturen (header, main, footer, osv...) på forsiden og artikkelsidene på dette nettstedet 
+				og Flexbox til hva hovedkolonnen på forsiden inneholder.</p>
+			</article>
+		</main>
+		
+		<footer id="main-footer">
+			<div class="footerL">
+				<p>Hans Eivind Skinstad</p>
+				<p>E-post: <a href="mailto:hans.e.skinstad@hiof.no">hans.e.skinstad@hiof.no</a></p>
+			</div>
+			<div class="footerR">
+				<img src="../../logotestsmall2.png" alt="Logo" />
+				<p>&copy; 2018 Hans Eivind Skinstad</p>
+			</div>
+		</footer>
+    </body>
+</html>

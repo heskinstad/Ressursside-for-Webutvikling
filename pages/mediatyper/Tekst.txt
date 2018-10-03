@@ -1,0 +1,6 @@
+Mediatyper
+
+
+
+Det bør til slutt nevnes at Media Queries var nytt fra og med CSS3, noe som tillot å ikke bare skille mellom ulike enheter, 
+men også å skille mellom f. eks. bredde eller høyde på vinduet. Dette forenkler jobben og forbedrer utformingen av responsive nettsider.

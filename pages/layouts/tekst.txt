@@ -1,0 +1,22 @@
+CSS-layouts
+
+Float
+Det er vanlig å bruke den såkalte boksmodellen (box-model) i utformingen av nettsider, og inntil relativt nylig gjerne i kombinasjon med float-elementer. 
+Kort fortalt handler boksmodellen om hvordan elementer posisjoneres og struktureres, samt elementene de inneholder.
+
+
+Flexbox
+Flexbox ("Flexible Box Module") er en ble implementert inn i CSS da CSS3 kom, og fjerner i mange tilfeller behovet for float. 
+Flexbox fungerer ved at elementer plasseres inni en flex-konteiner, for deretter å . 
+Med f. eks. flex-wrap kan det bestemmes at elementene innenfor konteineren skal legge over flere linjer.  
+Dette kan bla. brukes til å lage mer responsive nettsider som reguleres etter størrelsen på nettleservinduet og som har forskjellig layout på mobil/nettbrett og PC/Mac.
+
+
+Grid
+Det bør nevnes at Flexbox er laget for å brukes i én dimensjon, altså enten i rader eller kolonner. 
+CSS Grid brukes derimot til å posisjonere både rader og kolonner samtidig. 
+På en måte kan man si at CSS Grid fungerer litt som tables i html, men bare med større funksjonalitet og lettvinthet rundt utformingen, 
+og at CSS Grid faktisk er laget for å bruke i hovedutformingen og designet av nettsiden, noe tables overhodet ikke bør brukes til!
+
+Det er også mulig å kombinere CSS Grid og Flexbox i oppbyggingen og utformingen av en nettside, f. eks. ved å bruke Grid til selve hovedstrukturen (header, main, footer, osv...) 
+og Flexbox til hva hovedkolonnen inneholder, alik som på denne nettsiden.

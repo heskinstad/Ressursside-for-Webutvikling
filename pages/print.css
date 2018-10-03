@@ -1,0 +1,61 @@
+* {
+	background-color: #fff;
+}
+
+header#main-header, nav#main-navigation, footer#main-footer {
+	display: none;
+}
+
+body {
+	display: initial;
+	font-size: 12pt;
+	font-family: "Times New Roman", Georgia;
+}
+
+main#main-area {
+	display: block;
+	padding: 0 0.6cm;
+}
+
+h2 {
+	font-size: 24pt;
+	margin: 12px 0 8px 0;
+}
+
+h3 {
+	font-size: 16pt;
+	margin: 20px 0 8px 0;
+}
+
+h2, h3 {
+	page-break-after: avoid;
+}
+
+time.overskriftsDato {
+	font-size: 10pt;
+}
+
+.bildeHoeyre {
+	width: 36%;
+}
+
+.skjermbilde {
+	width: 50%;
+}
+
+.skjermbilde figcaption {
+	display: none;
+}
+
+a {
+	color: #00f;
+	page-break-inside: avoid;
+}
+
+a:after {
+		content:" (" attr(href) ") ";
+	}
+	
+figure a:after {
+	content: none;
+}
