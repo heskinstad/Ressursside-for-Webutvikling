@@ -89,7 +89,7 @@ a.les-mer-right {
 	right: 12px;
 }
 
-button#btnSoek {
+button#btnSoek { /*søkeknapp til google*/
 	margin-top: 6px;
 }
 
@@ -128,11 +128,11 @@ header#main-header p {
 }
 
 .headerskrift div { /* Linje bak headerskrift */
-	background-image: linear-gradient(to right , #fff0, #ffff, #fff0);
-	width: 100%;
+	background-image: linear-gradient(to right , #fff0, #ffff, #ffff, #fff0);
+	width: calc(24% + 240px);
 	height: 32%;
 	margin-top: -110px;
-	margin-left: -50%;
+	margin-left: -20%;
 	padding-right: calc(12vw + 150px);
 }
 
@@ -149,7 +149,7 @@ nav#main-navigation {
 	grid-area: navigation;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	background-color: #d1b786;
+	background-color: #d7bd8d;
 	text-align: center;
 }
 
@@ -160,20 +160,21 @@ nav#main-navigation a {
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 24px;
+	color: #d7414c;
 }
 
 nav#main-navigation a:hover {
-	background-color: #617166;
+	background-color: #e7cd9d;
 }
 
 #navlineL {
 	grid-area: navL;
-	background-color: #d1b786;
+	background-color: #d7bd8d;
 }
 
 #navlineR {
 	grid-area: navR;
-	background-color: #d1b786;
+	background-color: #d7bd8d;
 }
 
 

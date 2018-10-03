@@ -24,13 +24,16 @@
 			<h2>Mediatyper</h2>
 			<time class="overskriftsDato" datetime="2018-10-03">03/10/2018</time>
 			<article>
-				<h3>Underoverskrift</h3>
-				<p>Mediatyper i CSS handler om at nettsider kan ha forskjellig utseende avhengig av hva slags enhet (derfor "media") man bruker. 
+				<h3>Media Types</h3>
+				<p>Mediatyper (media types) i CSS handler om at nettsider kan ha forskjellig utseende avhengig av hva slags enhet (derfor "media") man bruker. 
 				I CSS-dokumentet kan mediatypen defineres ved å skrive "@media" og navnet på mediatypen, der de ulike mediatypene er følgende:</p>
+				<picture class="bildeHoeyre">
+					<img src="responsive-web-design.png" alt="Layout mellom enheter" title="Layouten for en nettside varierer mellom ulike enheter" />
+				</picture>
 				<ul>
 					<li><em>all</em> for alle enheter</li>
 					<li><em>braille</em> for berøringsenheter for svaksynte og blinde</li>
-					<li><em>emobossed</em> for utskrift av punktskrift/blindeskrift</li>
+					<li><em>emobossed</em> for utskrift av blindeskrift</li>
 					<li><em>handheld</em> for håndholdte enheter</li>
 					<li><em>print</em> for utskrift</li>
 					<li><em>projection</em> for prosjektor (og presentasjon)</li>
@@ -54,11 +57,17 @@
 				Grunnen til dette er at mobilsiden til Google ikke tillater å søke etter resultater innenfor en viss datoperiode, altså at mobilsiden har mindre funksjonalitet enn "standardsiden" for PCer. 
 				Så det bør nevnes at denne negative siden ved mediatypene i bunn og grunn handler om hvordan utviklere utformer sidene for forskjellige media.</p>
 				
+				<h3>Media Queries</h3>
 				<p>Media Queries var nytt fra og med CSS3, og tillot ikke bare skille mellom ulike enheter, 
-				men også å skille mellom f. eks. bredde eller høyde på vinduet. Det er derfor mulig å definere oppsettet på siden basert på bla. minimums- og/eller maksimumsbredde. 
+				men også å skille mellom f. eks. bredde eller høyde på vinduet. Fun fact: ideen til media queries ble først skissert av haldenseren Håkon Lie på 90-tallet. 
+				Uansett - det er derfor mulig å definere oppsettet på siden basert på bla. minimums- og/eller maksimumsbredde. 
 				Dette forenkler jobben og forbedrer utformingen av responsive nettsider samt at man lettere kan optimalisere siden for flere enheter. 
 				For i dag er det blitt mer vanlig å ha bare ett CSS-stilark for både mobil- og skrivebordsversjon av nettsider, 
-				der såkalte breakpoints avgjør utseendet på nettsiden avhengig av vindusbredden.</p>
+				der såkalte breakpoints avgjør utseendet på nettsiden avhengig av vindusbredden. Dette gjør det relativt enkelt å tilpasse nettsider til både mobile enheter og datamaskiner, 
+				selv om de alle har forskjellig størrelsesforhold (og ikke minst at mobiler som oftest brukes i "portrettmodus", mens de fleste større skjermer har et "landskapsmodus"). 
+				Spesielt viktig er dette i dag siden mobiltelefoner og nettbrett i 2018 utgjør <a href="https://www.stonetemple.com/mobile-vs-desktop-usage-study">over 50% av den globale nettsurfingen</a>. 
+				Dette er en av grunnene til at man tenker "mobile first" når det kommer til nettsideoppbygging ved bruk av media queries, altså at man først skal lage nettsiden slik at den er tilpasset 
+				mobile enheter først, for deretter å bruke breakpoints og tilpasse større (og ikke minst bredere) skjermer.</p>
 			</article>
 		</main>
 		

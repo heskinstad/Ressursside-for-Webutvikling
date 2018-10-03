@@ -43,8 +43,8 @@
 				Med f. eks. flex-wrap kan det bestemmes at elementene innenfor konteineren skal legge over flere linjer, og med justify-content hvordan elementene skal legge seg på hver rad (se illustrasjon).  
 				Dette kan bla. brukes til å lage mer responsive nettsider som reguleres etter størrelsen på nettleservinduet og som har forskjellig layout på mobil/nettbrett og PC/Mac.</p>
 				
-				<p>Bla. boksenes plassering på forsiden er bygget opp med FlexBox, der jeg har satt at de skal "wrappe" når det ikke lenger er nok plass til alle. 
-				Dette betyr at de "hopper" ned en linje når det ikke er plass til alle. 
+				<p>Bla. boksenes plassering på forsiden er bygget opp med Flexbox, der jeg har satt at de skal "wrappe" når det ikke lenger er plass til alle. 
+				Dette betyr at de fordeles over rader når det ikke er plass til alle på samme rad. 
 				Noe annet jeg også gjorde med de samme boksene, var at avstanden mellom dem alltid skulle være like stor, og at det skulle være en viss avstand mellom sidene i main og artikkelboksene. 
 				Til dette brukte jeg "justify-content: space-around".
 				Selv må jeg innrømme at det ikke ser spesielt bra ut når vinduet krympes slik at to bokser ligger øverst og en tynn boks tar opp hele raden under, 
@@ -63,7 +63,7 @@
 					<a href="forsideGrid.jpg">
 						<img src="forsideGrid.jpg" alt="Grid på dette nettstedet" title="Forsiden til nettstedet i Grid" />
 					</a>
-					<figcaption>Trykk på bildet for større versjon</figcaption>
+					<figcaption>Trykk for større bilde (gammel forside)</figcaption>
 				</figure>
 				<p>På dette nettstedet har jeg brukt CSS Grid for å bygge opp og utforme hovedelementene, dvs. headeren, navigasjonsmenyen, main- og aside-elementet og footeren. 
 				Bildet til venstre viser hvordan den øvre delen av forsiden til dette nettstedet er bygget opp, og høyden på både headeren og navigasjonsmenyen er angitt i piksler, 
@@ -77,6 +77,12 @@
 				"<em>Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.</em>" 
 				Grid blitt brukt til utformingen av selve hovedstrukturen (header, main, footer, osv...) på forsiden og artikkelsidene på dette nettstedet 
 				og Flexbox til hva hovedkolonnen på forsiden inneholder.</p>
+				
+				<p>CSS-tricks har to gode artikler som omhandler og går litt inn i dybden på Flexbox og Grid:</p>
+				<ul>
+					<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox">A Complete Guide to Flexbox</a></li>
+					<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a></li>
+				</ul>
 			</article>
 		</main>
 		

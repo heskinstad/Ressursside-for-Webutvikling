@@ -7,14 +7,14 @@ header#main-header, nav#main-navigation, footer#main-footer {
 }
 
 body {
-	display: initial;
-	font-size: 12pt;
+	display: initial; /*fjerner grid-oppsettet siden vi bare skal ha innholdet i main*/
+	font-size: 12pt; /*bruker pt istedenfor px på fonten, akkurat som i et "vanlig" tekstdokument*/
 	font-family: "Times New Roman", Georgia;
 }
 
 main#main-area {
 	display: block;
-	padding: 0 0.6cm;
+	padding: 0 0.6cm; /*marg på høyre/venstre side*/
 }
 
 h2 {
@@ -28,7 +28,7 @@ h3 {
 }
 
 h2, h3 {
-	page-break-after: avoid;
+	page-break-after: avoid; /*sørger for at overskriftene aldri står alene neders på en side*/
 }
 
 time.overskriftsDato {
@@ -53,9 +53,9 @@ a {
 }
 
 a:after {
-		content:" (" attr(href) ") ";
+		content:" (" attr(href) ") "; /*legger til URLen bak den klikkbare linken*/
 	}
 	
 figure a:after {
-	content: none;
+	content: none; /*fjerner tekst til figure (der det uansett bare står "klikk på bildet for å...")*/
 }
